@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+.header {
+    display: flex;
+    padding: 20px 40px;
+    height: 80px;
+    align-items: center;
+}
+
+button {
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.create-event-button {
+    margin-right: 20px;
+    padding: 0 10px;
+}
+
+.navigation__today-btn {
+    margin-left: 20px;
+    padding: 5px 15px;
+}
+
+.navigation__icon-btn {
+    margin-left: 20px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 60px);
+}
+.calendar__body {
+    display: flex;
+    overflow: auto;
+}
+
+.calendar__header {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    padding-left: 60px;
+}
+.calendar__day-label {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+}
+.calendar__day-name {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.calendar__day-number {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+/* Part #2 */
+
+.sidebar {
+    width: 60px;
+    height: 100%;
+}
+
+.sidebar__time-slot {
+    height: 60px;
+    text-align: right;
+}
+.sidebar__time {
+    font-size: 10px;
+    position: relative;
+    top: -15px;
+    margin-right: 5px;
+}
+
+.calendar__week {
+    display: flex;
+    flex-grow: 1;
+}
+.calendar__day {
+    flex: 1;
+    border-left: 1px solid #ccc;
+}
+.calendar__hour {
+    height: 60px;
+    border-bottom: 1px solid #eee;
+}
+
+.event {
+    width: 90%;
+    height: 100px;
+    background-color: cornflowerblue;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #fff;
+    padding: 10px;
+}
+
+.event__title{
+    width: 100%;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.modal {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlay {
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(206, 201, 201, 0.711);
+}
+
+.hidden {
+    display: none;
+}
+
+.modal__content {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+
+.create-event {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-event__close-btn {
+    transform: rotate(45deg);
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    align-self: flex-end;
+    font-size: 30px;
+}
+
+.create-event-form__field {
+    border: 0;
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+input,
+textarea {
+    border: none;
+}
+
+.create-event-form__time {
+    margin: 50px 0;
+}
+
+.create-event-form__submit-btn {
+    margin-top: 15px;
+    border: 0;
+    background-color: cornflowerblue;
+    width: 120px;
+    padding: 10px 16px;
+    color: #fff;
+    border-radius: 8px;
+    float: right;
+}
+

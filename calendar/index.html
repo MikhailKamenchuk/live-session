@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    integrity="sha256-WAgYcAck1C1/zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+   <header class="header">
+       <button class="create-event-button">
+            <i class="fas fa-plus"></i>
+            Create
+        </button>
+       <div class="navigation">
+           <button class="navigation__today-btn">Today</button>
+           <button class="navigation__icon-btn">
+               <i class="fas fa-chevron-left"></i>
+           </button>
+           <button class="navigation__icon-btn">
+                <i class="fas fa-chevron-right"></i>
+           </button>
+           <span class="navigation__displayed-month">
+               Jun - Jul 2020
+           </span>
+       </div>
+   </header>
+
+   <main class="calendar">
+        <header class="calendar__header">
+            <div class="calendar__day-label">
+                <span class="calendar__day-name">Mon</span>
+                <span class="calendar__day-number">27</span>
+            </div>
+            <div class="calendar__day-label">
+                <span class="calendar__day-name">Mon</span>
+                <span class="calendar__day-number">27</span>
+            </div>
+            <div class="calendar__day-label">
+                <span class="calendar__day-name">Mon</span>
+                <span class="calendar__day-number">27</span>
+            </div>
+            <div class="calendar__day-label">
+                <span class="calendar__day-name">Mon</span>
+                <span class="calendar__day-number">27</span>
+            </div>
+            <div class="calendar__day-label">
+                <span class="calendar__day-name">Mon</span>
+                <span class="calendar__day-number">27</span>
+            </div>
+            <div class="calendar__day-label">
+                <span class="calendar__day-name">Mon</span>
+                <span class="calendar__day-number">27</span>
+            </div>
+            <div class="calendar__day-label">
+                <span class="calendar__day-name">Mon</span>
+                <span class="calendar__day-number">27</span>
+            </div>
+        </header>
+        <div class="calendar__body">
+            <div class="calendar__sidebar sidebar">
+                <div class="sidebar__time-slot">
+                    <span class="sidebar__time">
+                        9:00
+                    </span>
+                </div>
+                <div class="sidebar__time-slot">
+                    <span class="sidebar__time">
+                        9:00
+                    </span>
+                </div>
+                <div class="sidebar__time-slot">
+                    <span class="sidebar__time">
+                        9:00
+                    </span>
+                </div>
+                <div class="sidebar__time-slot">
+                    <span class="sidebar__time">
+                        9:00
+                    </span>
+                </div>
+                <div class="sidebar__time-slot">
+                    <span class="sidebar__time">
+                        9:00
+                    </span>
+                </div>
+                <div class="sidebar__time-slot">
+                    <span class="sidebar__time">
+                        9:00
+                    </span>
+                </div>
+            </div>
+            <div class="calendar__week">
+                <div class="calendar__day">
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour">
+                        <div class="event">
+                            <span class="event__title">Go to the gym</span>
+                            <span class="event__time">10:00 - 12:00</span>
+                        </div>
+                    </div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                </div>
+                <div class="calendar__day">
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                </div>
+                <div class="calendar__day">
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                </div>
+                <div class="calendar__day">
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                </div>
+                <div class="calendar__day">
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                </div>
+                <div class="calendar__day">
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                </div>
+                <div class="calendar__day">
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                    <div class="calendar__hour"></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal overlay hidden">
+            <div class="modal__content">
+                <div class="create-event">
+                    <button class="create-event__close-btn">+</button>
+                    <form class="create-event-form">
+                        <input type="text" name="title" class="create-event-form__field" placeholder="Title">
+                        <div class="create-event-form__time">
+                            <input type="date" class="create-event-form__date-field">
+                            <input type="time" class="create-event-form__date-field">
+                            <span>-</span>
+                            <input type="time" class="create-event-form__date-field">
+                        </div>
+                        <textarea name="description" id="" placeholder="Description" class="create-event-form__field"></textarea>
+                        <button class="create-event-form__submit-btn">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+   </main>
+</body>
+    
+</html>
