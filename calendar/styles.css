@@ -31,16 +31,6 @@ button {
   display: none;
 }
 
-textarea {
-  resize: none;
-  height: 100px;
-}
-
-input,
-textarea {
-  border: none;
-}
-
 .header {
   display: flex;
   padding: 20px 40px;
