@@ -5,10 +5,14 @@
 // 1. iterate keysList with reduce
 // 1. iterate keysList with reduce
 
-const buildObject = (keysList, valuesList) => {
-    return keysList.reduce((acc,next,index) => {
-        const newElem = {[next]: valuesList[index]}
-        console.log(newElem)
-        return  Object.assign(acc, newElem);
-    }, {})
-};
+// function buildObject(keysList, valuesList) {
+//     return keysList.reduce((acc, key, index) => {
+//         return { ...acc, [key]: valuesList[index] };
+//     }, {});
+// }
+
+const buildObject = (keysList, valuesList) => keysList.reduce((acc,next,index) => Object.assign(acc, {[next]: valuesList[index]}), {});
+
+let k = ['1', '2', '3'];
+let v = ['a', 'b', 'c'];
+console.log(buildObject(k,v))
