@@ -1,6 +1,7 @@
 const timer = {
     secondsPassed: 0,
     minsPassed: 0,
+    intervalId: null,
 
     // startTimer: function(){
 
@@ -20,24 +21,27 @@ const timer = {
 
         //fix context with arrow func
 
-        setInterval(() => {
+        this.intervalId = setInterval(() => {
             console.log(this);
-            this.secondsPassed += 1;
-            // if (this.secondsPassed === 60) {
-            //     ++this.minsPassed;
-            //     this.secondsPassed = 0;
 
-            // }
+            this.secondsPassed += 1;
+
+            if (this.secondsPassed === 60) {
+                this.minsPassed += 1;
+                this.secondsPassed = 0;
+            }
         }, 1000);
     },
     stopTimer() {
-
+        console.log('stopTimer is called');
+        console.log(this);
+        clearInterval(this.intervalId);
     },
     getTime() {
 
     },
     reset() {
-
+        
     }
 };
 
