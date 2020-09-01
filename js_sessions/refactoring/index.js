@@ -1,11 +1,11 @@
 import {renderList} from './render.js';
 import {tasks} from './storage.js';
-import {checkthisDone, createTaskBoard} from './gateway.js';
+import {updateTask, createTask} from './gateway.js';
 
 renderList(tasks);
 
 const createBtn = document.querySelector('.create-task-btn');
-createBtn.addEventListener('click', createTaskBoard);
+createBtn.addEventListener('click', createTask);
 
 const listElem = document.querySelector('.list');
-listElem.addEventListener('click', checkthisDone);
+listElem.addEventListener('click', updateTask);
