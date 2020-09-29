@@ -4,7 +4,7 @@ import Logout from './Logout';
 import Spinner from './Spinner'
 
 
-//algo 
+// algo 
 // make class component+++
 // store isLoggedIn, isLoading in state+++
 // login, logout handlers+++
@@ -14,7 +14,13 @@ class Auth extends React.Component {
         isLogedIn: false,
         loading: false
     }
- 
+
+
+    // algo:
+    // hide login
+    // show spinner
+    // hide spinner 
+    // show logout
     onLogin = () => {
         this.setState({
             loading: true
@@ -32,15 +38,15 @@ class Auth extends React.Component {
     }
 
     render() {
-        const {isLogedIn, loading} = this.state;
-        
-        if(loading){
-            return <Spinner size={45}/>
+        const { isLogedIn, loading } = this.state;
+
+        if (loading) {
+            return <Spinner size={45} />
         }
         return (
-            !isLogedIn 
-            ? <Login onLogin={this.onLogin} />
-            : <Logout onLogout={this.onLogout}/>
+            !isLogedIn
+                ? <Login onLogin={this.onLogin} />
+                : <Logout onLogout={this.onLogout} />
         )
     }
 };
